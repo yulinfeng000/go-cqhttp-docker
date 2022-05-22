@@ -1,0 +1,8 @@
+services:
+   go-cqhttp:
+      image: cam/go-cqhttp:0.1
+      container_name: cqhttp
+      restart: always
+      volumes:
+        - ./data:/data
+      network_mode: host
