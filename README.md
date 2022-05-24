@@ -1,3 +1,7 @@
+# Step0
+
+执行 docker build -t cam/go-cqhttp:0.1 .
+
 # Step1
 
 执行下列命令在data目录下生成config文件
