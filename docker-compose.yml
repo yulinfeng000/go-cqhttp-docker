@@ -4,5 +4,5 @@ services:
       container_name: cqhttp
       restart: always
       volumes:
-        - ./data:/data
+        - .:/data
       network_mode: host
