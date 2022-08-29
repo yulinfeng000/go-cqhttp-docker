@@ -25,7 +25,7 @@
 
 ```shell
 docker run -d --name cqhttp                     \
-                --restart                       \
+                --restart always                \
                 -v ${PWD}:/data                 \
                 -p <宿主机端口>:<配置文件内的端口>  \
                 cam/cqhttp:0.1
