@@ -1,11 +1,13 @@
 FROM arm32v7/debian
 
+ARG BIN_LINK=https://github.com/Mrs4s/go-cqhttp/releases/download/v1.0.0-rc1/go-cqhttp_linux_armv7.tar.gz
+
 WORKDIR /data
 
 RUN apt-get update &&  apt-get install -y ffmpeg wget && \
-        wget -O cqhttp.tar.gz  https://github.com/Mrs4s/go-cqhttp/releases/download/v1.0.0-rc1/go-cqhttp_linux_armv7.tar.gz && \
-        tar -zvxf cqhttp.tar.gz && mv ./go-cqhttp /usr/bin/cqhttp
+        wget -O cqhttp.tar.gz $BIN_LINK && \
+        tar -zvxf cqhttp.tar.gz && mv ./go-cqhttp /usr/bin/go-cqhttp
 
 
 
-ENTRYPOINT [ "/usr/bin/cqhttp" ]
+ENTRYPOINT [ "/usr/bin/go-cqhttp" ]
